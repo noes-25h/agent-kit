@@ -1,0 +1,11 @@
+{
+  "name": "judgment-index",
+  "version": "0.1.0",
+  "description": "An index of judgment criteria kept in the repository. With its one line in CLAUDE.md, Claude looks the scene up before asking a person whether it may do something, reads one row, and adds a row when none exists.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/judgment-index"
+}

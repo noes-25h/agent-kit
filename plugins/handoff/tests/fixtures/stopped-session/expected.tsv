@@ -1,0 +1,22 @@
+# Expected points for the stopped-session fixture.
+# One row per point: id <TAB> kind <TAB> pattern <TAB> what a good handoff contains
+# kind = reply      the pattern (extended regex, case-insensitive) is searched in the final reply, with line breaks turned into spaces
+# kind = file:GLOB  the pattern is searched in the files that GLOB matches inside the copied repo
+# kind = untouched  no pattern; the point is met when services/, README.md and test.sh did not change during the run
+# The patterns are keyword matches. They can count a point that was mentioned for the wrong reason, and miss one that was phrased differently.
+# MIN is the number of points the with-plugin run must reach for live-check.sh to exit 0. It has not been tuned against a real run.
+# MIN=10
+sheet	file:handoff/*.md	[a-z]	An instruction sheet exists in the plans directory
+recheck	file:handoff/*.md	Re-check at start	The sheet opens with a re-check of its premises
+premise-count	file:handoff/*.md	(test\.sh.{0,240}2 of 5)|(2 of 5.{0,240}test\.sh)	The re-check confirms the starting count (2 of 5) with the command that prints it
+stop	file:handoff/*.md	Stop conditions.{0,240}(test\.sh|grep|timeout_ms)	The stop conditions are written as commands and expected output
+step-orders	file:handoff/*.md	orders	The steps cover services/orders.conf
+step-search	file:handoff/*.md	search	The steps cover services/search.conf
+left-out	file:handoff/*.md	Not in this run.{0,240}export	The sheet says that export is not in this run
+paths	file:handoff/*.md	forbidden.{0,240}test\.sh|test\.sh.{0,240}(forbidden|do not (touch|edit|change))	test.sh is listed as a path not to touch
+halt	file:handoff/*.md	When to halt	The sheet says when to stop trying
+note-export	file:TODO.md	export	The export config is recorded as a note, not as a step
+note-open	file:TODO.md	no limit|unlimited|not (been )?(decided|chosen)|undecided|has not chosen|=0|rejects	The note names what is not decided (what replaces "no limit")
+prompt-readme	reply	README	The README line is handed over as a standalone prompt
+goal-line	reply	/goal	The reply gives the line that starts the run and leaves the starting to the user
+untouched	untouched	-	The remaining work was not done while writing the handoff

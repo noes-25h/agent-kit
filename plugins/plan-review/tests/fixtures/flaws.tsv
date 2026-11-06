@@ -1,0 +1,10 @@
+# The three flaws planted in flawed-plan.md. The reviewers are not given this file.
+# Tab-separated columns: id, anchor, subject, problem, description.
+#   anchor   a phrase that must still be in flawed-plan.md (lower case). If it is gone, the flaw is no longer planted.
+#   subject  extended regular expression: words for the subject of the flaw. Matched at the start of a word.
+#   problem  extended regular expression: words that say something is wrong. Matched as whole words.
+# A flaw counts as found when one lower-cased line of review text matches both subject and problem.
+# A line that only names the subject does not count. flawed-plan.md itself must score 0.
+checksum-claim	confirms each archive against a checksum	checksum|verif|integrity	no|not|never|nowhere|missing|absent|lacks?|without|contradict[a-z]*|false|untrue|incorrect|wrong	The plan says backup.sh confirms each archive against a checksum. reference/backup.sh has no such step.
+upload-arithmetic	completes inside the maintenance period	upload|uplink|40 ?gb|20 ?mbit|maintenance period|window	exceed[a-z]*|overrun[a-z]*|too slow|too long|longer than|more than (2|two) hours|not (complete|finish|fit|hold|enough)|cannot (complete|finish|fit)|4\.4|4\.5|16,?000|four hours|4 hours|4h|past 04:00|after 04:00|arithmetic|miscalculat[a-z]*|twice	40 GB at 20 Mbit/s takes about 4.4 hours. The plan says the upload completes inside a period of 2 hours.
+delete-before-proof	delete the old cron entry and the local archives	delet|remov|step 3|cron entry|local archives	before step 4|before the (new|first)|before (it|the job|the new job) (has|is)|order|reorder[a-z]*|irreversib[a-z]*|cannot be undone|no way back|rollback|roll back|first successful|until the new job|until step 4|after the new job|after step 4|swap|too early|premature[a-z]*|unproven|not yet (run|proven|verified)	Step 3 deletes the old cron entry and the local archives. Step 4 is the first run of the new job. The step that cannot be undone comes first.

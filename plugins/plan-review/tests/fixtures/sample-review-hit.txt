@@ -1,0 +1,9 @@
+Hand-written sample of a review that names all three planted flaws. Used by selftest to check the counter. It is not the output of a reviewer.
+
+1. fail: The plan states that the script confirms each archive after upload. reference/backup.sh contains no checksum step at all: it runs tar, uploads with curl, and prints a line.
+   Alternative: add a checksum comparison to the job. Falsifier: the server rejects corrupt uploads by itself.
+2. fail: 40 GB at 20 Mbit/s is 320,000 Mbit / 20 = 16,000 seconds, about 4.4 hours. The upload does not fit a two-hour maintenance period.
+   Alternative: incremental archives. Falsifier: the 20 Mbit/s figure is megabytes, not megabits.
+3. fix: Step 3 removes the cron entry and the local archives before the new job has run once. If step 4 fails there is no backup and no way back.
+   Alternative: swap steps 3 and 4. Falsifier: the scheduler keeps the old entry as a fallback.
+4. note: the "Done when" section does not include a restore from the remote copy.

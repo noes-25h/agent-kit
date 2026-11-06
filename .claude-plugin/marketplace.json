@@ -1,0 +1,49 @@
+{
+  "name": "25h-agent-kit",
+  "description": "Eight small Claude Code plugins for the failures that repeat: keys, plans, handoffs, and time.",
+  "owner": {
+    "name": "25h"
+  },
+  "plugins": [
+    {
+      "name": "install-gate",
+      "source": "./plugins/install-gate",
+      "description": "Checks for an audit record before Claude installs a tool machine-wide: no record blocks, LOW passes, MID or HIGH asks you. Includes a skill that writes the record."
+    },
+    {
+      "name": "secret-guard",
+      "source": "./plugins/secret-guard",
+      "description": "Blocks tool calls that contain key-shaped strings before they run, and redacts keys from the output of successful Bash commands before Claude receives it."
+    },
+    {
+      "name": "time-guard",
+      "source": "./plugins/time-guard",
+      "description": "Gives Claude the current local date and time from the system clock on every prompt, and adds a note when Claude writes time wording that has no clock time or date next to it."
+    },
+    {
+      "name": "plan-review",
+      "source": "./plugins/plan-review",
+      "description": "Sends a finished plan to two independent reviewers that have not seen the conversation, then rules on every finding and records the rulings in the plan file."
+    },
+    {
+      "name": "root-fix",
+      "source": "./plugins/root-fix",
+      "description": "When the same mistake keeps coming back: trace it to its source, fix that one point, sweep for siblings of the same defect, and add a check that would catch the next occurrence."
+    },
+    {
+      "name": "handoff",
+      "source": "./plugins/handoff",
+      "description": "Turns the work left at the end of a session into instructions that the next session can run with no prior context: stop conditions a command can confirm, and a re-check of the premises before anything else."
+    },
+    {
+      "name": "session-memory",
+      "source": "./plugins/session-memory",
+      "description": "Injects a thin snapshot of where the work stands at session start, and provides two skills: one writes the daily record at the end of a session, one builds a single morning page."
+    },
+    {
+      "name": "judgment-index",
+      "source": "./plugins/judgment-index",
+      "description": "An index of judgment criteria kept in the repository. With its one line in CLAUDE.md, Claude looks the scene up before asking a person whether it may do something, reads one row, and adds a row when none exists."
+    }
+  ]
+}

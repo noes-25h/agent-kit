@@ -1,0 +1,11 @@
+{
+  "name": "root-fix",
+  "version": "0.1.0",
+  "description": "When the same mistake keeps coming back: trace it to its source, fix that one point, sweep for siblings of the same defect, and add a check that would catch the next occurrence.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/root-fix"
+}

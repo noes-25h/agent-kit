@@ -1,0 +1,11 @@
+{
+  "name": "secret-guard",
+  "version": "0.1.0",
+  "description": "Blocks tool calls that contain key-shaped strings before they run, and redacts keys from the output of successful Bash commands before Claude receives it.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/secret-guard"
+}

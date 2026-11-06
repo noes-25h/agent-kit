@@ -1,0 +1,6 @@
+# Written by hand. Not in scripts/jobs.list and not produced by the generator.
+# UTC on purpose: the result is compared with timestamps from the upstream monitor, which reports in UTC.
+NAME=healthcheck
+TZ=UTC
+SCHEDULE="*/5 * * * *"
+COMMAND="bin/run healthcheck"

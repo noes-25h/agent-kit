@@ -1,0 +1,11 @@
+{
+  "name": "handoff",
+  "version": "0.1.0",
+  "description": "Turns the work left at the end of a session into instructions that the next session can run with no prior context: stop conditions a command can confirm, and a re-check of the premises before anything else.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/handoff"
+}

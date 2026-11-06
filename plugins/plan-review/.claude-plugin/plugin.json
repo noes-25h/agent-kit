@@ -1,0 +1,11 @@
+{
+  "name": "plan-review",
+  "version": "0.1.0",
+  "description": "Sends a finished plan to two independent reviewers that have not seen the conversation, then rules on every finding and records the rulings in the plan file.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/plan-review"
+}

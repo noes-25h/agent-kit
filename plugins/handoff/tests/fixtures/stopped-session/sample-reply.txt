@@ -1,0 +1,16 @@
+This file was written by hand. It is not output from Claude Code.
+selftest.sh uses it to confirm that the patterns in expected.tsv can be met at all.
+
+| Exit | Count | Content |
+|---|---|---|
+| Instruction sheet | 1 | see the line below |
+| Standalone prompt | 1 | Correct the key description in README.md |
+| Note | 1 | What replaces "no limit" for the export config |
+
+To start the run:
+
+/goal Every stop condition in handoff/2026-06-12_timeout-migration-plan.md holds, confirmed by running the commands written there.
+
+Standalone prompt:
+
+Before starting, confirm that README.md still describes the key as `timeout` in seconds. If it does not, do not carry out the task; report what you found instead. Then change that line to describe `timeout_ms` in milliseconds.

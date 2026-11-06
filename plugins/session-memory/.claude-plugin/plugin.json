@@ -1,0 +1,11 @@
+{
+  "name": "session-memory",
+  "version": "0.1.0",
+  "description": "Injects a thin snapshot of where the work stands at session start, and provides two skills: one writes the daily record at the end of a session, one builds a single morning page.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/session-memory"
+}

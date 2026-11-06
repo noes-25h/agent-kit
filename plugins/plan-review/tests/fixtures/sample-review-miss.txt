@@ -1,0 +1,7 @@
+Hand-written sample of a review that talks about the same subjects and names none of the three planted flaws. Used by selftest to check that the counter does not count a subject word alone. It is not the output of a reviewer.
+
+1. note: The plan reuses backup.sh as it is, which keeps the change small. The checksum handling stays where it is today.
+2. note: The 40 GB archive and the 20 Mbit/s uplink are both taken from the ops notes, so the upload figures are measured values.
+3. note: Step 3 frees the disk by deleting the cron entry and the local archives, and step 4 confirms the job.
+4. fix: The failure message goes to one channel only. Name a second recipient.
+   Alternative: add the team mailing list. Falsifier: the on-call channel already forwards to it.

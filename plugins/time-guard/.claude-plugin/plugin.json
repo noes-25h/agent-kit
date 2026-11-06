@@ -1,0 +1,11 @@
+{
+  "name": "time-guard",
+  "version": "0.1.1",
+  "description": "Gives Claude the current local date and time from the system clock on every prompt, and adds a note when Claude writes time wording that has no clock time or date next to it.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/time-guard"
+}

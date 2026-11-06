@@ -1,0 +1,18 @@
+# Expected points for the three-repeats fixture.
+# One row per point: id <TAB> kind <TAB> pattern <TAB> what a good diagnosis says
+# kind = reply      the pattern (extended regex, case-insensitive) is searched in the final reply, with line breaks turned into spaces
+# kind = untouched  no pattern; the point is met when no file in the copied repo changed during the run
+# The patterns are keyword matches. They can count a point that was mentioned for the wrong reason, and miss one that was phrased differently.
+# MIN is the number of points the with-plugin run must reach for live-check.sh to exit 0. It has not been tuned against a real run.
+# MIN=8
+template	reply	job\.tmpl	Names scripts/job.tmpl as the place that holds the wrong value
+generator	reply	gen-jobs\.sh	Names scripts/gen-jobs.sh as what writes the wrong value back into the job files
+false-claim	reply	(template|job\.tmpl).{0,240}(still|never|not (been |actually |really )?(fixed|changed|corrected)|false|untrue|incorrect)	Notices that the 2026-04-11 entry says the template was fixed, and that the template still sets UTC
+billing-lost	reply	billing	Finds that jobs/billing.job is back on UTC (the April fix was overwritten in May)
+sibling-export	reply	export\.job	Finds jobs/export.job, never reported
+sibling-invoice	reply	invoice	Finds jobs/invoice.job, never reported
+sibling-archive	reply	archive	Finds jobs/archive.job, never reported
+exclusion	reply	healthcheck.{0,240}(exclu|on purpose|intention|deliberate|by hand|hand-written|not generated|not produced)|(exclu|intention|deliberate).{0,240}healthcheck	Excludes jobs/healthcheck.job and gives the reason (written by hand, UTC on purpose)
+single-point	reply	Single point	Uses the report format and states one point
+check	reply	Recurrence check	Proposes a check that would fail if the defect came back
+untouched	untouched	-	Changes no file, because --apply was not given

@@ -1,0 +1,11 @@
+{
+  "name": "install-gate",
+  "version": "0.1.0",
+  "description": "Checks for an audit record before Claude installs a tool machine-wide: no record blocks, LOW passes, MID or HIGH asks you. Includes a skill that writes the record.",
+  "author": {
+    "name": "25h"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/noes-25h/agent-kit",
+  "homepage": "https://github.com/noes-25h/agent-kit/tree/main/plugins/install-gate"
+}
